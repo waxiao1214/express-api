@@ -1,8 +1,8 @@
-version: "3.8"
+version: "3"
 services:
   mongodb:
     image: mongo
-    container_name: xin_mongodb
+    container_name: mongodb
     environment:
       - PUID=1000
       - PGID=1000
@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
   adminmongo:
     image: mrvautin/adminmongo
-    container_name: xin_mongo_admin
+    container_name: mongo_admin
     ports:
       - 1234:1234
     links:
