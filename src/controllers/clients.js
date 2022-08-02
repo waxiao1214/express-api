@@ -132,6 +132,7 @@ export class ClientsController {
    */
   static delete = async (request, response) => {
     try {
+      const id = request.params.id
       await deleteClient(id);
       response.status(200).send('client is successfully deleted!');
     } catch (error) {

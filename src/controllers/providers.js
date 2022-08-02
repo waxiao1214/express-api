@@ -114,7 +114,7 @@ export class ProvidersController {
 
   /**
    * @openapi
-   * /provider/{id}:
+   * /providers/{id}:
    *    delete:
    *      parameters:
    *        - name: id
@@ -129,8 +129,8 @@ export class ProvidersController {
   static delete = async (request, response) => {
     try {
       const id = request.params.id;
-      await deleteProvider(id);
-      response.status(200).send('client is successfully deleted!');
+      const provider = await deleteProvider(id);
+      response.status(200).send(provider);
     } catch (error) {
       response.status(500).send(error);
     }

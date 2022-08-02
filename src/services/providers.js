@@ -23,7 +23,7 @@ export const updateProvider = async (id, data) => {
 };
 
 export const deleteProvider = async (id) => {
-  const provider = await Provider.findByIdAndRemove(id, {});
-  await Client.updateMany({}, { $pull: { providers: provider._id } });
+  const provider = await Provider.findByIdAndRemove({ _id: id });
+  // await Client.updateMany({}, { $pull: { providers: provider._id } });
   return provider;
 };

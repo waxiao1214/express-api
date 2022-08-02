@@ -22,6 +22,6 @@ export const updateClient = async (id, data) => {
 } 
 
 export const deleteClient = async (id) => {
-  const client = await Client.findByIdAndRemove(id);
+  const client = await Client.findByIdAndRemove({ _id: id});
   return client;
 }
