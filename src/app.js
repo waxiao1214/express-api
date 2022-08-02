@@ -19,9 +19,8 @@ if (process.env.NODE_ENV === "development") {
   const swaggerOptions = {
     swaggerDefinition: {
       info: {
-        title: "Catchphrases REST API",
-        description:
-          "A REST API built with Express and MongoDB. This API provides movie catchphrases and the context of the catchphrase in the movie.",
+        title: "Swagger REST API",
+        description: "A REST API built with Express and MongoDB"
       },
     },
     apis: [__dirname + "/controllers/*"],
@@ -31,6 +30,6 @@ if (process.env.NODE_ENV === "development") {
   try {
     app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
   } catch (err) {
-    console.error("unable to read swagger.json", err);
+    console.error(err);
   }
 }
