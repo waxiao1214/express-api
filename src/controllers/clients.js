@@ -101,6 +101,17 @@ export class ClientsController {
    *          required: true
    *          schema:
    *            type: object
+   *            properties:
+   *              email:
+   *                type: string
+   *              name:
+   *                type: string
+   *              phone_number:
+   *                type: string
+   *              providers:
+   *                type: array
+   *                items:
+   *                  type: string
    *      responses:
    *        200:
    *          description: Update a client.

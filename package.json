@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development nodemon src/server.js"
+    "dev": "NODE_ENV=development nodemon src/server.js",
+    "build": "node node_modules/@babel/cli/bin/babel.js src/. -d build",
+    "start": "NODE_ENV=production node build/index.js"
   },
   "author": "",
   "license": "ISC",

@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "development") {
   const swaggerOptions = {
     swaggerDefinition: {
       info: {
-        title: "Swagger REST API",
+        title: "Express-Mongo REST API",
         description: "A REST API built with Express and MongoDB"
       },
     },
