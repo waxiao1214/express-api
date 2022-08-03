@@ -17,7 +17,7 @@ export const createClient = async (data) => {
 }
 
 export const updateClient = async (id, data) => {
-  const client = await Client.findOneAndUpdate({ _id: id }, body, { new: true });
+  const client = await Client.findOneAndUpdate({ _id: id }, data, { new: true });
   return client;
 } 
 

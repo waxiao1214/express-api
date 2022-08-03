@@ -1,4 +1,5 @@
 import { Provider } from '../models/provider'
+import { Client } from '../models/client';
 
 export const getAllProviders = async () => {
   const providers = await Provider.find();
@@ -24,6 +25,6 @@ export const updateProvider = async (id, data) => {
 
 export const deleteProvider = async (id) => {
   const provider = await Provider.findByIdAndRemove({ _id: id });
-  // await Client.updateMany({}, { $pull: { providers: provider._id } });
+  await Client.updateMany({}, { $pull: { providers: provider._id } });
   return provider;
 };
